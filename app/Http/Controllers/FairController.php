@@ -41,7 +41,7 @@ class FairController extends Controller
     /**
      * Store a newly created fair in the database.
      * 
-     * @param UpdateFairsRequest $request The sanitized and validated request
+     * @param CreateFairsRequest $request The sanitized and validated request
      * @return FairResource The newly created fair data
      */
     public function store(CreateFairsRequest $request)

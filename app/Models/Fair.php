@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -49,10 +50,10 @@ class Fair extends Model
 
     /**
      * Get the address associated with the fair.
-     * 
-     * @return BelongsTo
+     *
+     * @return HasOne
      */
-    public final function address()
+    public final function address(): HasOne
     {
         return $this->hasOne(related: FairAddress::class, foreignKey: 'id', localKey: 'address_id');
     }
@@ -61,8 +62,9 @@ class Fair extends Model
      * Return the fairs with all pertinent relations.
      * Those relations are: FairAddress, District, Borough,
      * CensusSector and CensusArea.
-     * 
+     *
      * @param Builder $query The Builder context
+     *
      * @return Builder
      */
     public final function scopeAllRelations(Builder $query): Builder
@@ -76,11 +78,13 @@ class Fair extends Model
         ]);
     }
 
-    /** 
+    /**
      * Filter Fairs by a specific fair name.
-     * 
+     *
      * @param Builder $query The Builder context
      * @param string $name The name for filtering
+     *
+     * @return Builder
      */
     public final function scopeFilterByFairName(Builder $query, ?string $name): Builder
     {

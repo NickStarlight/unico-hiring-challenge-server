@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -30,7 +31,7 @@ class District extends Model
      * 
      * @return HasOne
      */
-    public function borough()
+    public function borough(): HasOne
     {
         return $this->hasOne(related: Borough::class, foreignKey: 'id', localKey: 'borough_id');
     }

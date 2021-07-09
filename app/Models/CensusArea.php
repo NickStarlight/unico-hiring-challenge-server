@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -30,7 +31,7 @@ class CensusArea extends Model
      * 
      * @return BelongsTo
      */
-    public function censusSector()
+    public function censusSector(): BelongsTo
     {
         return $this->belongsTo(related: CensusSector::class, foreignKey: 'id', ownerKey: 'census_area_id');
     }

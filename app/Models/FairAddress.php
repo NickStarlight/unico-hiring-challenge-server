@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -39,20 +40,20 @@ class FairAddress extends Model
 
     /**
      * Get the district associated with the fair address.
-     * 
+     *
      * @return HasOne
      */
-    public function district()
+    public function district(): HasOne
     {
         return $this->hasOne(related: District::class, foreignKey: 'id', localKey: 'district_id');
     }
 
     /**
      * Get the census area associated with the district.
-     * 
+     *
      * @return HasOne
      */
-    public function censusArea()
+    public function censusArea(): HasOne
     {
         return $this->hasOne(related: CensusArea::class, foreignKey: 'id', localKey: 'census_area_id');
     }
