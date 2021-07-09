@@ -9,9 +9,9 @@ class TrustHosts extends Middleware
     /**
      * Get the host patterns that should be trusted.
      *
-     * @return (null|string)[]
+     * @return array<(string|null)>
      *
-     * @psalm-return array{0: null|string}
+     * @psalm-return array{0: (string|null)}
      */
     public function hosts()
     {

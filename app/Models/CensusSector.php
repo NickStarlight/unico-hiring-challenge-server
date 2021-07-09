@@ -8,10 +8,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Model CensusSector
  * Represents a `Setor Censitário`.
- * 
+ *
  * @author Nick Moraes <contato@nickgomes.dev>
+ *
  * @version 1.0
+ *
  * @access public
+ *
  * @license https://creativecommons.org/licenses/by-nc/4.0/
  */
 class CensusSector extends Model

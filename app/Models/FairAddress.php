@@ -9,10 +9,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Model FairAddress
  * Represents a `Feira-Livre` address.
- * 
+ *
  * @author Nick Moraes <contato@nickgomes.dev>
+ *
  * @version 1.0
+ *
  * @access public
+ *
  * @license https://creativecommons.org/licenses/by-nc/4.0/
  */
 class FairAddress extends Model
@@ -26,7 +29,7 @@ class FairAddress extends Model
      */
     protected $fillable = [
         'number', 'street', 'neighborhood', 'reference_point',
-        'longitude', 'latitude', 'district_id', 'census_area_id'
+        'longitude', 'latitude', 'district_id', 'census_area_id',
     ];
 
     /**
@@ -35,7 +38,7 @@ class FairAddress extends Model
      * @var array<string>
      */
     protected $hidden = [
-        'district_id', 'census_area_id', 'created_at', 'updated_at', 'deleted_at'
+        'district_id', 'census_area_id', 'created_at', 'updated_at', 'deleted_at',
     ];
 
     /**

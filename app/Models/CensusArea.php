@@ -9,10 +9,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Model CensusArea
  * Represents a `Area de ponderação`.
- * 
+ *
  * @author Nick Moraes <contato@nickgomes.dev>
+ *
  * @version 1.0
+ *
  * @access public
+ *
  * @license https://creativecommons.org/licenses/by-nc/4.0/
  */
 class CensusArea extends Model
@@ -28,7 +31,7 @@ class CensusArea extends Model
 
     /**
      * Get the Census Sector that contains the Census Area.
-     * 
+     *
      * @return BelongsTo
      */
     public function censusSector(): BelongsTo

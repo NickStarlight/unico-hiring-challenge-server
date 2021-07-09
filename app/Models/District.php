@@ -9,10 +9,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Model District
  * Represents a `Distrito`.
- * 
+ *
  * @author Nick Moraes <contato@nickgomes.dev>
+ *
  * @version 1.0
+ *
  * @access public
+ *
  * @license https://creativecommons.org/licenses/by-nc/4.0/
  */
 class District extends Model
@@ -28,7 +31,7 @@ class District extends Model
 
     /**
      * Get the borough associated with the district.
-     * 
+     *
      * @return HasOne
      */
     public function borough(): HasOne

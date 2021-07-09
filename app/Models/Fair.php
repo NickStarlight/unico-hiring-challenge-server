@@ -10,10 +10,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Model Fair
  * Represents a `Feira-Livre`.
- * 
+ *
  * @author Nick Moraes <contato@nickgomes.dev>
+ *
  * @version 1.0
+ *
  * @access public
+ *
  * @license https://creativecommons.org/licenses/by-nc/4.0/
  */
 class Fair extends Model
@@ -34,7 +37,7 @@ class Fair extends Model
      */
     protected $hidden = ['address_id', 'created_at', 'updated_at', 'deleted_at'];
 
-    /** 
+    /**
      * Bootstrap the model and its traits.
      */
     public static function boot()
@@ -47,13 +50,12 @@ class Fair extends Model
         });
     }
 
-
     /**
      * Get the address associated with the fair.
      *
      * @return HasOne
      */
-    public final function address(): HasOne
+    final public function address(): HasOne
     {
         return $this->hasOne(related: FairAddress::class, foreignKey: 'id', localKey: 'address_id');
     }
@@ -67,14 +69,14 @@ class Fair extends Model
      *
      * @return Builder
      */
-    public final function scopeAllRelations(Builder $query): Builder
+    final public function scopeAllRelations(Builder $query): Builder
     {
         return $query->with([
             'address',
             'address.district',
             'address.district.borough',
             'address.censusArea',
-            'address.censusArea.censusSector'
+            'address.censusArea.censusSector',
         ]);
     }
 
@@ -86,7 +88,7 @@ class Fair extends Model
      *
      * @return Builder
      */
-    public final function scopeFilterByFairName(Builder $query, ?string $name): Builder
+    final public function scopeFilterByFairName(Builder $query, ?string $name): Builder
     {
         if ($name) {
             return $query->where('name', $name);
