@@ -23,7 +23,7 @@ jobs:
         run: composer dump-autoload
 
       - name: Generate boogus app-key
-        run: php artisan key:generate
+        run: touch .env && php artisan key:generate
 
       - name: Run Psalm
         run: psalm
