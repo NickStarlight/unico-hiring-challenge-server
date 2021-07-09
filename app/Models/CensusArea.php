@@ -36,6 +36,10 @@ class CensusArea extends Model
      */
     public function censusSector(): BelongsTo
     {
-        return $this->belongsTo(related: CensusSector::class, foreignKey: 'id', ownerKey: 'census_area_id');
+        return $this->belongsTo(
+            related: CensusSector::class,
+            foreignKey: 'id',
+            ownerKey: 'census_area_id'
+        );
     }
 }

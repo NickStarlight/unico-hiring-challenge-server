@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Foundation\Support\Providers\AuthServiceProvider as SP;
 
-class AuthServiceProvider extends ServiceProvider
+class AuthServiceProvider extends SP
 {
     /**
      * The policy mappings for the application.
@@ -23,7 +23,5 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-
-    
     }
 }

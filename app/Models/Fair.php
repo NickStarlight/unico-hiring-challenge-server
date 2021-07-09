@@ -35,7 +35,10 @@ class Fair extends Model
      *
      * @var array<string>
      */
-    protected $hidden = ['address_id', 'created_at', 'updated_at', 'deleted_at'];
+    protected $hidden = [
+        'address_id', 'created_at',
+        'updated_at', 'deleted_at',
+    ];
 
     /**
      * Bootstrap the model and its traits.
@@ -57,7 +60,11 @@ class Fair extends Model
      */
     final public function address(): HasOne
     {
-        return $this->hasOne(related: FairAddress::class, foreignKey: 'id', localKey: 'address_id');
+        return $this->hasOne(
+            related: FairAddress::class,
+            foreignKey: 'id',
+            localKey: 'address_id'
+        );
     }
 
     /**

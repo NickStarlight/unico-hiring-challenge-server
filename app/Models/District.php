@@ -27,7 +27,9 @@ class District extends Model
      *
      * @var array<string>
      */
-    protected $hidden = ['borough_id', 'created_at', 'updated_at', 'deleted_at'];
+    protected $hidden = [
+        'borough_id', 'created_at', 'updated_at', 'deleted_at',
+    ];
 
     /**
      * Get the borough associated with the district.
@@ -36,6 +38,10 @@ class District extends Model
      */
     public function borough(): HasOne
     {
-        return $this->hasOne(related: Borough::class, foreignKey: 'id', localKey: 'borough_id');
+        return $this->hasOne(
+            related: Borough::class,
+            foreignKey: 'id',
+            localKey: 'borough_id'
+        );
     }
 }

@@ -1,8 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "nickstarlight/unico-hiring-challenge-server",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "Hiring challenge.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",

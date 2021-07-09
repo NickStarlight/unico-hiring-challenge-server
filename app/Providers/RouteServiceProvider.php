@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider as SP;
 use Illuminate\Support\Facades\Route;
 
-final class RouteServiceProvider extends ServiceProvider
+class RouteServiceProvider extends SP
 {
     /**
      * The path to the "home" route for your application.
@@ -17,7 +17,8 @@ final class RouteServiceProvider extends ServiceProvider
     /**
      * The controller namespace for the application.
      *
-     * When present, controller route declarations will automatically be prefixed with this namespace.
+     * When present, controller route declarations will automatically
+     * be prefixed with this namespace.
      *
      * @var string|null
      */

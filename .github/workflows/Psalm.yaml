@@ -1,0 +1,23 @@
+name: Psalm Static analysis
+
+on: [push, pull_request]
+
+jobs:
+  psalm:
+    name: Psalm
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup PHP with tools
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          tools: vimeo/psalm
+
+      - name: Install dependencies
+        run: composer install --prefer-dist
+
+      - name: Run Psalm
+        run: psalm --show-info=true

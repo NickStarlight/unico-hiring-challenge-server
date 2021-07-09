@@ -26,5 +26,7 @@ class CensusSector extends Model
      *
      * @var array<string>
      */
-    protected $hidden = ['census_area_id', 'created_at', 'updated_at', 'deleted_at'];
+    protected $hidden = [
+        'census_area_id', 'created_at', 'updated_at', 'deleted_at',
+    ];
 }

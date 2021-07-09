@@ -38,7 +38,8 @@ class FairAddress extends Model
      * @var array<string>
      */
     protected $hidden = [
-        'district_id', 'census_area_id', 'created_at', 'updated_at', 'deleted_at',
+        'district_id', 'census_area_id', 'created_at',
+        'updated_at', 'deleted_at',
     ];
 
     /**
@@ -48,7 +49,11 @@ class FairAddress extends Model
      */
     public function district(): HasOne
     {
-        return $this->hasOne(related: District::class, foreignKey: 'id', localKey: 'district_id');
+        return $this->hasOne(
+            related: District::class,
+            foreignKey: 'id',
+            localKey: 'district_id'
+        );
     }
 
     /**
@@ -58,6 +63,10 @@ class FairAddress extends Model
      */
     public function censusArea(): HasOne
     {
-        return $this->hasOne(related: CensusArea::class, foreignKey: 'id', localKey: 'census_area_id');
+        return $this->hasOne(
+            related: CensusArea::class,
+            foreignKey: 'id',
+            localKey: 'census_area_id'
+        );
     }
 }
