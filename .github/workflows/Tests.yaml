@@ -1,4 +1,4 @@
-name: PHP Insights
+name: Test and coverage
 
 on: [push, pull_request]
 
@@ -12,6 +12,6 @@ jobs:
           with:
               php-version: 8.0
         - run: composer install --prefer-dist --no-progress --no-suggest
-        - run: ./vendor/bin/sail up
+        - run: ./vendor/bin/sail up -d
         - run: ./vendor/bin/sail artisan migrate
         - run: ./vendor/bin/sail artisan test --coverage-html reports
