@@ -17,7 +17,5 @@ jobs:
         - run: ./vendor/bin/sail up -d
         - run: sleep 60s
         - run: docker-compose exec -T -u sail laravel.test php artisan migrate
-        - run: docker-compose exec -T -u sail laravel.test php artisan test --coverage-xml reports
+        - run: docker-compose exec -T -u sail laravel.test php artisan test --coverage-clover coverage.xml
         - uses: codecov/codecov-action@v1
-          with:
-            directory: reports
