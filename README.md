@@ -3,6 +3,7 @@
 ![Coding Style](https://img.shields.io/badge/Coding%20Style-PSR--12-yellow)
 [![Code Quality](https://img.shields.io/badge/Code%20Quality-A-green)](https://github.com/NickStarlight/unico-hiring-challenge-server/actions/workflows/Quality.yaml)
 ![Psalm Static Analysis](https://github.com/NickStarlight/unico-hiring-challenge-server/actions/workflows/Quality.yaml/badge.svg)
+![Test and coverage](https://github.com/NickStarlight/unico-hiring-challenge-server/actions/workflows/Tests.yaml/badge.svg)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 
 ## About
