@@ -1,4 +1,4 @@
-name: Test and coverage
+name: Tests and coverage
 
 on: [push, pull_request]
 
@@ -8,7 +8,6 @@ jobs:
       name: Testing and coverage check
       steps:
         - uses: actions/checkout@v2
-        - uses: codecov/codecov-action@v1
         - uses: shivammathur/setup-php@v1
           with:
               php-version: 8.0
@@ -19,3 +18,4 @@ jobs:
         - run: sleep 60s
         - run: docker-compose exec -T -u sail laravel.test php artisan migrate
         - run: docker-compose exec -T -u sail laravel.test php artisan test --coverage-xml reports
+        - uses: codecov/codecov-action@v1
