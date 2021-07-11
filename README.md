@@ -73,12 +73,21 @@ Listed only attributes that do not translate directly from the original.
 Errors are automatically logged to `storage/logs/laravel.log`.
 
 ## Testing
-This repository offers no unit/integration tests due time constraints.
+This repository offer two types of tests, Unit and Feature.
 
-Honestly, it's very hard to be a working functioning adult and having to deal with a 
-very long test as this one.
+Unit tests focus on testing specific functions while Feature tests focus on testing HTTP endpoints and it's responses.
 
-Just for god's sake change your evaluation method, this is too over the top.
+For running all the tests, use the built-in Laravel Sail CLI with the Artisan test command:
+
+```bash
+./vendor/bin/sail artisan test
+```
+
+If you wan't coverage reports to be also generated, use:
+
+```bash
+./vendor/bin/sail artisan test --coverage-html reports
+```
 
 ## License
 This work is licensed under a

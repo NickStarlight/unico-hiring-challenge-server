@@ -20,7 +20,7 @@ class CreateFairsRequest extends FormRequest
             'address.street' => 'string|min:1|max:34',
             'address.neighborhood' => 'string|min:1|max:20',
             'address.reference_point' => 'string|min:1|max:24',
-            'address.longitude' => 'required|numeric|between:-90,90',
+            'address.longitude' => 'required|numeric|between:-180,180',
             'address.latitude' => 'required|numeric|between:-90,90',
             'address.district_id' => 'integer|required|exists:districts,id',
             'address.census_area_id' => 'integer|required|exists:census_areas,id',
