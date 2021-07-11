@@ -32,19 +32,25 @@ This module contains the second half of the Unico Hiring Challenge that is descr
 composer install
 ```
 
-2. Start the Laravel Sail container
+2. Create your .env file, the defaults will work fine.
+
+```bash
+cp .env.example .env
+```
+
+3. Start the Laravel Sail container
 ```bash
 ./vendor/bin/sail up -d
 ```
 
-3. Run the migrations
+4. Run the migrations
 ```bash
 ./vendor/bin/sail artisan migrate
 ```
 
-4. Run the ETL script from the ETL counterpart of this project
+5. Run the ETL script from the ETL counterpart of this project
 
-5. You're good to go!
+6. You're good to go!
 
 ## API Documentation
 All documentation and use examples can be found on the OpenFair Postman documentation page.

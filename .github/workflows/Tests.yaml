@@ -16,5 +16,6 @@ jobs:
         - run: cp .env.example .env
         - run: composer install --prefer-dist --no-progress --no-suggest
         - run: ./vendor/bin/sail up -d
+          run: sleep 60s
         - run: docker-compose exec -T -u sail laravel.test php artisan migrate
         - run: docker-compose exec -T -u sail laravel.test php artisan test --coverage-xml reports
