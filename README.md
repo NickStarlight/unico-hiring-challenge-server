@@ -4,6 +4,7 @@
 [![Code Quality](https://img.shields.io/badge/Code%20Quality-A-green)](https://github.com/NickStarlight/unico-hiring-challenge-server/actions/workflows/Quality.yaml)
 ![Psalm Static Analysis](https://github.com/NickStarlight/unico-hiring-challenge-server/actions/workflows/Quality.yaml/badge.svg)
 ![Test and coverage](https://github.com/NickStarlight/unico-hiring-challenge-server/actions/workflows/Tests.yaml/badge.svg)
+[![codecov](https://codecov.io/gh/NickStarlight/unico-hiring-challenge-server/branch/master/graph/badge.svg?token=K2D4AEBB3D)](https://codecov.io/gh/NickStarlight/unico-hiring-challenge-server)
 ![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 
 ## About
