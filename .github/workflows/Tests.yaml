@@ -11,6 +11,7 @@ jobs:
         - uses: shivammathur/setup-php@v1
           with:
               php-version: 8.0
+        - run: cp .env.example .env.testing
         - run: composer install --prefer-dist --no-progress --no-suggest
         - run: ./vendor/bin/sail up -d
         - run: docker-compose exec -T -u sail laravel.test php artisan migrate
